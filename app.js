@@ -75,6 +75,6 @@ io.on("connection",(socket)=>{
         io.emit("player_postion",my_user_data)
     })
 })
-server.listen(3000,()=>{
+server.listen(process.env.PORT || 3000,()=>{
     console.log("server_run")
 })
