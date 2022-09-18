@@ -53,11 +53,19 @@ socket_1.on("player_postion",(postion)=>{
 })
 
 socket_1.on("discon",(id) =>{
+    for (let i = 0;user_list_main.length>i;i++){
+        if (user_list_main[i].userId == id){
+            ctx.fillStyle = "black"
+            ctx.fillRect(user_list_main[i].postion_x,user_list_main[i].postion_y,30,30)
+        }
+    }
     if (id == userId){
+        
         user_list = null
         user_list = []
         my_x =0
         my_x = 0;
         userId = null
+        
     }
 })
