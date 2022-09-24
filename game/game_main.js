@@ -37,6 +37,16 @@ function delete_other_user(){
     }
     
 }
+function dedlete_stage(){
+    ctx.fillStyle = back_glound_color;
+    ctx.fillRect(0,0,1000,1000)
+}
+function main_loop(){
+    dedlete_stage()
+    write_me()
+    write_other_player()
+}
+setInterval(main_loop,10)
 let moves = {
     up:function(){
         my_y -= speed;
@@ -57,21 +67,21 @@ let moves = {
 }
 document.addEventListener("keydown",function(e){
     if (e.code == 'KeyW' || e.code == 'ArrowUp') {
-        delete_me()
+        //delete_me()
 		moves.up();
-        write_me()
+       // write_me()
 	} else if (e.code == 'KeyS' || e.code == 'ArrowDown') {
-        delete_me()
+        //delete_me()
 		moves.down();
-        write_me()
+        //write_me()
 	} else if (e.code == 'KeyA' || e.code == 'ArrowLeft') {
-        delete_me()
+        //delete_me()
 		moves.left();
-        write_me()
+        //write_me()
 	} else if (e.code == 'KeyD' || e.code == 'ArrowRight') {
-        delete_me()
+        //delete_me()
 		moves.right();
-        write_me()
+        //write_me()
 	} else if (e.code == 'Space'){
   }
 })

@@ -1,8 +1,6 @@
 const express = require("express");
-
 const app = express()
 const http = require("http");
-const { isObject } = require("util");
 const server = http.createServer(app);
 const io = require("socket.io")(server);
 let user_list = [];

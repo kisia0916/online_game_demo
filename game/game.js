@@ -57,6 +57,7 @@ socket_1.on("discon",(id) =>{
         if (user_list_main[i].userId == id){
             ctx.fillStyle = "black"
             ctx.fillRect(user_list_main[i].postion_x,user_list_main[i].postion_y,30,30)
+            user_list_main.splice(i,1);
         }
     }
     if (id == userId){
